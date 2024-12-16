@@ -1,0 +1,70 @@
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center; /* Center vertically */
+  z-index: 100;
+}
+
+.step {
+  position: relative;
+  text-align: center;
+  flex: 1; /* Equal space for all steps */
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.step-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: grey;
+  color: white;
+  line-height: 30px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1998 !important;
+  transition: background-color 1s ease, transform 1s ease; /* Smooth transition for background and position */
+}
+
+.step-title {
+  margin-top: 10px;
+  color: grey;
+  transition: opacity 1s ease; /* Fade transition for text */
+}
+
+.step-line {
+  position: absolute;
+  top: 15px; /* Adjust vertical position */
+  width: 100%; /* Full width */
+  height: 2px;
+  border: 2px solid grey;
+  left: 0; /* Start from the left */
+  z-index: 1995 !important;
+  transition: border-color 1s ease; /* Smooth transition for line color */
+  opacity: 0.5; /* Make the line slightly transparent when inactive */
+}
+
+/* Define the green color animation when the step becomes active */
+.step.active .step-line {
+  border: 2px solid #70ffd7;
+  opacity: 1; /* Full opacity when active */
+}
+
+.step.active .step-number {
+  background-color: #22a183;
+  position: relative;
+  z-index: 1998 !important;
+  transform: scale(1.2); /* Slightly scale up the step number for emphasis */
+}
+
+.step.active .step-title {
+  color: #22a183;
+}
+
+.step:first-child .step-line {
+  display: none; /* Hide line for the first step */
+}
+
+.step:not(:last-child) .step-line {
+  display: block; /* Show line for all but last step */
+}

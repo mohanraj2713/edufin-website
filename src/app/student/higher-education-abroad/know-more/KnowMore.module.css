@@ -1,0 +1,33 @@
+.hero-section .heading {
+  font-size: 64px !important;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.section {
+  padding: 2rem 0;
+}
+
+.doodle-mobile {
+  display: none;
+}
+
+.doodle-desktop {
+  display: block;
+}
+
+@media (max-width: 575.98px) {
+  .hero-section .heading {
+    font-size: 32px !important;
+  }
+
+  .doodle-mobile {
+    display: block;
+    height: 130px;
+    width: 130px;
+  }
+
+  .doodle-desktop {
+    display: none;
+  }
+}

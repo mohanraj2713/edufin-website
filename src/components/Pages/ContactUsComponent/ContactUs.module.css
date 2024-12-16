@@ -1,0 +1,14 @@
+.component-wrapper {
+  position: relative !important;
+  z-index: 600 !important;
+  background: #fff;
+  padding-bottom: 5rem;
+}
+
+.form-container {
+  background: #f9f9ff;
+  border: 2px solid #2e3191;
+  margin-top: 5rem;
+  border-radius: 1rem;
+  padding: 2.5rem;
+}

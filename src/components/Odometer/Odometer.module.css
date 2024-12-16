@@ -1,0 +1,32 @@
+.odometer {
+  display: flex;
+  overflow: hidden;
+}
+
+.digit {
+  position: relative;
+  width: 0.9rem;
+  height: 2rem; /* Increased height to ensure the digits fit comfortably */
+  overflow: hidden;
+}
+
+.odometer-number {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-out;
+}
+
+.digit {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 575.98px) {
+  .digit {
+    width: 0.6rem;
+    height: 1.2rem; /* Increased height to ensure the digits fit comfortably */
+  }
+}

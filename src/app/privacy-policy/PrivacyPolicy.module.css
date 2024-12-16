@@ -1,0 +1,9 @@
+.heading {
+  font-size: 86px !important;
+}
+
+@media (max-width: 575.98px) {
+  .heading {
+    font-size: 20px !important;
+  }
+}

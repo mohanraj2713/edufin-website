@@ -1,0 +1,103 @@
+.component-wrapper {
+  background: #272727;
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+}
+
+.company-caption {
+  font-size: 28px;
+}
+
+.footer-section-heading {
+  font-size: 28px;
+  color: #33a484;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.footer-section-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section-list li {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.credits-container {
+  background: #c1c1c1;
+}
+
+.spinwheel {
+  position: absolute;
+  top: 53%;
+  left: -25%;
+  width: 60vw;
+  height: auto;
+  transform: translate(50%, -50%);
+  transform-style: preserve-3d;
+  transform-origin: center; /* Ensure it rotates around its center */
+  animation: rotate 10s linear infinite; /* Total duration is 10 seconds */
+  z-index: 400;
+}
+
+.spinwheel-container {
+  margin: -47px 0 !important;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(50%, -50%) rotate(0deg);
+  }
+  20% {
+    transform: translate(50%, -50%) rotate(0deg); /* Pause at 0 degrees */
+  }
+  25% {
+    transform: translate(50%, -50%) rotate(90deg);
+  }
+  45% {
+    transform: translate(50%, -50%) rotate(90deg); /* Pause at 90 degrees */
+  }
+  50% {
+    transform: translate(50%, -50%) rotate(180deg);
+  }
+  70% {
+    transform: translate(50%, -50%) rotate(180deg); /* Pause at 180 degrees */
+  }
+  75% {
+    transform: translate(50%, -50%) rotate(270deg);
+  }
+  95% {
+    transform: translate(50%, -50%) rotate(270deg); /* Pause at 270 degrees */
+  }
+  100% {
+    transform: translate(50%, -50%) rotate(360deg); /* Smooth transition back to 0 degrees */
+  }
+}
+
+@media (max-width: 575.98px) {
+  .edufin-footer-logo {
+    width: 150px !important;
+    height: 50px !important;
+  }
+
+  .footer-section-list li {
+    font-size: 16px !important;
+  }
+
+  .footer-section-heading {
+    font-size: 16px !important;
+  }
+
+  .contact-us-icon {
+    width: 10px !important;
+    height: 15px !important;
+  }
+
+  .social-media-icon {
+    height: 24px !important;
+    width: 24px !important;
+  }
+}

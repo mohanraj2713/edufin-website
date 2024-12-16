@@ -1,0 +1,24 @@
+.edufin-logo {
+  width: 145px;
+  height: 72px;
+}
+
+.dropdown-item {
+  font-size: 16px !important;
+  margin-bottom: 0.5rem !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  font-weight: bold !important;
+}
+
+.dropdown-item:hover {
+  background: var(--primary-color) !important;
+  color: #fff !important;
+}
+
+@media (max-width: 575.98px) {
+  .edufin-logo {
+    width: 130px;
+    height: 35px;
+  }
+}

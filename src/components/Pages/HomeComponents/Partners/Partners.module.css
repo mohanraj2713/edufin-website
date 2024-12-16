@@ -1,0 +1,10 @@
+.component-wrapper {
+  padding-bottom: 32px !important;
+}
+
+@media (max-width: 575.98px) {
+  .other-partners-logo {
+    width: 80px !important;
+    height: auto !important;
+  }
+}

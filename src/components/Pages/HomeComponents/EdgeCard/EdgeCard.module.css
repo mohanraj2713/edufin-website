@@ -1,0 +1,55 @@
+.component-wrapper {
+  min-height: 400px;
+  border: 2px solid transparent;
+}
+
+.component-wrapper:hover {
+  border: 2px solid var(--primary-color);
+}
+
+.cta-link {
+  color: #5055ff;
+  cursor: pointer;
+}
+
+.hero-image {
+  height: 64px;
+  width: 64px;
+}
+
+.know-more-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1rem 1.5rem;
+}
+
+.content-para-container {
+  width: 100%;
+  max-height: 300px; /* Limits the height */
+  overflow: hidden; /* Hides content that overflows */
+  display: -webkit-box; /* Establishes a flexbox layout for text */
+  -webkit-line-clamp: 6; /* Limits to 3 lines (you can adjust this value based on your needs) */
+  line-clamp: 6;
+  -webkit-box-orient: vertical; /* Ensures the content is stacked vertically */
+  text-overflow: ellipsis; /* Adds ellipsis when content overflows */
+}
+
+@media (max-width: 575.98px) {
+  .component-wrapper {
+    min-height: 300px;
+    border: 2px solid var(--primary-color);
+  }
+
+  .hero-image {
+    height: 32px !important;
+    width: 32px !important;
+  }
+
+  .know-more-container {
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+    padding-bottom: 8px;
+  }
+}

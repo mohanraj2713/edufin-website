@@ -1,0 +1,52 @@
+.card {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  position: relative !important;
+  width: 400px !important;
+  height: 250px !important;
+  overflow: hidden !important;
+}
+
+.card img {
+  position: absolute !important;
+  top: 0 !important;
+  right: -10% !important;
+  height: 200px !important;
+  width: 200px !important;
+}
+
+.card .content {
+  position: relative !important; /* Ensures content stays in the same place */
+  z-index: 1 !important; /* Keeps content above background */
+  transition: transform 0.3s ease !important; /* Smooth transition for scaling */
+}
+
+.card:hover .content {
+  transform: scale(1.1) !important; /* Scale the contents up by 10% */
+}
+
+.card .content h3,
+.card .content img {
+  transition: transform 0.3s ease !important; /* Ensure text and images scale smoothly */
+}
+
+.card:hover .content h3,
+.card:hover .content img {
+  transform: scale(
+    1.1
+  ) !important; /* Optional: Scale text and images smoothly */
+}
+
+@media (max-width: 575.98px) {
+  .card {
+    height: 100px !important;
+    width: 100% !important;
+  }
+
+  .card img {
+    top: -100% !important;
+    right: -10% !important;
+    height: 100px !important;
+    width: 100px !important;
+  }
+}

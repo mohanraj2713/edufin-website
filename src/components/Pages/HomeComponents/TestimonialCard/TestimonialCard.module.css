@@ -1,0 +1,42 @@
+.testimonial-card {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+}
+
+.content-container {
+  width: 100%;
+  max-height: 300px; /* Limits the height */
+  overflow: hidden; /* Hides content that overflows */
+  display: -webkit-box; /* Establishes a flexbox layout for text */
+  -webkit-line-clamp: 11; /* Limits to 3 lines (you can adjust this value based on your needs) */
+  line-clamp: 11;
+  -webkit-box-orient: vertical; /* Ensures the content is stacked vertically */
+  text-overflow: ellipsis; /* Adds ellipsis when content overflows */
+}
+
+.author-container {
+  min-height: 200px !important;
+}
+
+.school-logo {
+  width: 80px;
+  height: auto;
+}
+
+@media (min-width: 1199.98px) {
+  .author-container {
+    min-height: 125px !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .testimonial-card {
+    border-radius: 2rem !important;
+    border: 1px solid rgba(34, 161, 131, 1) !important;
+  }
+
+  .author-container {
+    min-height: 125px !important;
+  }
+}

@@ -1,0 +1,25 @@
+.component-wrapper {
+  position: relative;
+  background: #5551c9;
+  padding-top: 32px !important;
+  z-index: 600 !important;
+}
+
+.know-more-icon {
+  width: 18px;
+  height: 18px;
+  display: none;
+}
+
+@media (max-width: 575.98px) {
+  .toi-logo {
+    width: 32px !important;
+    height: 12px !important;
+  }
+
+  .know-more-icon {
+    width: 18px;
+    height: 18px;
+    display: inline;
+  }
+}

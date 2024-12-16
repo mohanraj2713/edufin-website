@@ -1,0 +1,165 @@
+.onload-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  cursor: pointer;
+}
+
+.welcome-guy-doodle {
+  animation: slide-down-and-disappear 5s ease-in-out forwards; /* Animation duration 2s */
+}
+
+.component-wrapper {
+  min-height: 600px;
+  height: 100%;
+  position: relative;
+}
+
+.spinwheel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60vw;
+  height: auto;
+  transform: translate(50%, -50%);
+  z-index: 1500;
+  transform-style: preserve-3d;
+  transform-origin: center; /* Ensure it rotates around its center */
+}
+
+.flying-guy-container {
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  width: 30%;
+}
+
+.flying-guy {
+  z-index: 600;
+  animation: fly-in 1s ease-in-out forwards; /* Animation lasts 3s */
+}
+
+.hero-content {
+  height: 50px !important;
+  position: absolute !important;
+  top: 10% !important;
+  left: 10% !important;
+}
+
+.hero-content-highlight {
+  font-size: 42px !important;
+}
+
+.hero-content-text-container {
+  height: 200px !important;
+}
+
+.doodle {
+  width: 200px !important;
+  height: 200px !important;
+}
+
+.doodle img {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.stats-icon {
+  margin-top: 1rem;
+}
+
+@media (max-width: 575.98px) {
+  .component-wrapper {
+    min-height: 750px;
+    position: relative !important;
+  }
+
+  .doodle {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  /* h2,
+  span {
+    font-size: 20px !important;
+  } */
+
+  .hero-content-highlight {
+    font-size: 20px !important;
+  }
+
+  .description {
+    font-size: 16px !important;
+  }
+
+  .hero-content {
+    position: absolute !important;
+    top: 40% !important;
+    left: 0 !important;
+    padding: 0 1rem !important;
+  }
+
+  .stats-icon {
+    height: 10px !important;
+    width: 10px !important;
+  }
+
+  .spinwheel {
+    width: 600px !important;
+    max-width: none !important;
+  }
+
+  .welcome-guy-doodle {
+    width: 130px !important;
+    height: 230px !important;
+    position: absolute !important;
+    top: 25% !important;
+    left: 35% !important;
+  }
+
+  .flying-guy-container {
+    top: 25%;
+    left: 25%;
+    width: 100%;
+  }
+
+  .flying-guy {
+    height: 100px !important;
+    width: 100px !important;
+  }
+
+  .hero-content-text-container {
+    height: 240px !important;
+  }
+}
+
+@keyframes fly-in {
+  0% {
+    transform: translateX(-100vw); /* Start off the screen from the left */
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
+
+@keyframes slide-down-and-disappear {
+  0% {
+    transform: translateY(0); /* No vertical movement initially */
+    opacity: 1; /* Fully visible */
+  }
+  50% {
+    transform: translateY(0); /* Still in its original position, visible */
+    opacity: 1; /* Still fully visible */
+  }
+  100% {
+    transform: translateY(100px); /* Slide down 100px (or as needed) */
+    opacity: 0; /* Fade out completely */
+  }
+}

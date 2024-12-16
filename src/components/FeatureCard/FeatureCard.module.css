@@ -1,0 +1,20 @@
+.component-wrapper {
+  min-height: 350px;
+  border: 1px solid;
+}
+
+.doodle-image {
+  width: 40px;
+  height: 40px;
+}
+
+.details-container {
+  width: 100%;
+  max-height: 200px; /* Limits the height */
+  overflow: hidden; /* Hides content that overflows */
+  display: -webkit-box; /* Establishes a flexbox layout for text */
+  -webkit-line-clamp: 5; /* Limits to x lines (you can adjust this value based on your needs) */
+  line-clamp: 5;
+  -webkit-box-orient: vertical; /* Ensures the content is stacked vertically */
+  text-overflow: ellipsis; /* Adds ellipsis when content overflows */
+}

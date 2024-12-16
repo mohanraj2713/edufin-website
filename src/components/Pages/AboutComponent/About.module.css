@@ -1,0 +1,56 @@
+.component-wrapper {
+  position: relative;
+  z-index: 600;
+  background: #fff;
+}
+
+.hero-section {
+  background: #e3e3ff;
+  box-shadow: 0px 4px 4px 0px #c5c3fb4f;
+}
+
+.hero-section h1 {
+  font-size: 64px;
+}
+
+.edufin-edge-section {
+  background: #f3fffc;
+  box-shadow: 0px 4px 4px 0px #c5c3fb4f;
+}
+
+.team-member-card {
+  background: #e3e3ff;
+  box-shadow: 0px 2px 4px 0px #00000040;
+  border-radius: 10px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.team-member-card.advisor {
+  background: #f3fffc;
+}
+
+.team-member-card img {
+  width: 140px;
+  height: 140px;
+}
+
+.edufin-edge-logo {
+  width: 330px;
+  height: 220px;
+}
+
+@media (max-width: 575.98px) {
+  .hero-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .edufin-edge-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .edufin-edge-logo {
+    width: 90px;
+    height: 60px;
+  }
+}
