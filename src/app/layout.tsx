@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css"; // Ensure paths match your structure
 import Layout from "@/components/Layout/Layout";
-import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS
+import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap CSS
+import { Suspense } from "react";
 // import 'bootstrap/dist/js/bootstrap.bundle.min'; // Bootstrap JS (optional)
 
 // Define custom fonts
@@ -31,7 +32,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Layout>{children}</Layout>
+        <Suspense fallback={<>Loading...</>}>
+          <Layout>{children}</Layout>
+        </Suspense>
       </body>
     </html>
   );
