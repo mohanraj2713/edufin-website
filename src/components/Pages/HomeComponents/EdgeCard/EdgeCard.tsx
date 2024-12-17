@@ -1,5 +1,6 @@
 import { useRouter } from "next/navigation"; // Import useRouter from Next.js
 import Image from "next/image";
+import { StaticImageData } from "next/image";
 import { getStringInUserLanguage } from "../../../../content/lang";
 import EdgeCardStyles from "./EdgeCard.module.css";
 
@@ -8,7 +9,7 @@ type EdgeCardProps = {
   contentPara1: string;
   contentPara2: string;
   ctaLink: string;
-  heroImage: string;
+  heroImage: StaticImageData;
 };
 
 const EdgeCard: React.FC<EdgeCardProps> = (props) => {
