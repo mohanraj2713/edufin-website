@@ -1,0 +1,32 @@
+.component-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  padding-top: 20vh;
+}
+
+.doodle {
+  width: 100px;
+  height: 100px;
+}
+
+.card {
+  border: 2px solid rgba(46, 49, 145, 1);
+  margin-bottom: 10vh;
+}
+
+@media (max-width: 575.98px) {
+  .component-wrapper {
+    top: 0;
+    left: 0;
+    transform: none;
+    height: 100vh;
+  }
+
+  .doodle {
+    width: 45px;
+    height: 45px;
+  }
+}
