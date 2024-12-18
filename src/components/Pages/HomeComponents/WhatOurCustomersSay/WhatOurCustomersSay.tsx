@@ -159,7 +159,7 @@ const WhatOurCustomersSay = () => {
               </div>
             </div>
 
-             {
+            {
               <div
                 className={`${WhatOurCustomersSayStyles["video-player-overlay"]}
                   ${showOverlay ? "d-block" : "d-none"}
@@ -179,15 +179,17 @@ const WhatOurCustomersSay = () => {
                   <div
                     className={`${WhatOurCustomersSayStyles["player-container"]}`}
                   >
-                    <video
-                      src={showOverlay ? videoUrl : ""}
-                      preload={"none"}
-                      autoPlay={true}
-                      controls
-                      width={"100%"}
-                      height={"100%"}
-                      className={`${WhatOurCustomersSayStyles["video"]}`}
-                    />
+                    {showOverlay && videoUrl && (
+                      <video
+                        src={videoUrl}
+                        preload="none"
+                        autoPlay
+                        controls
+                        width="100%"
+                        height="100%"
+                        className={`${WhatOurCustomersSayStyles["video"]}`}
+                      />
+                    )}
                   </div>
                 </div>
               </div>
@@ -198,15 +200,15 @@ const WhatOurCustomersSay = () => {
               <div
                 className={`${WhatOurCustomersSayStyles["carousel-wrapper"]}`}
               >
-                {/* <Carousel
+                <Carousel
                   slides={slides}
                   goToSlide={carouselState.goToSlide}
                   offsetRadius={carouselState.offsetRadius}
                   showNavigation={carouselState.showNavigation}
                   animationConfig={carouselState.config}
-                /> */}
+                />
               </div>
-            </div> 
+            </div>
           </div>
         </div>
       </div>
