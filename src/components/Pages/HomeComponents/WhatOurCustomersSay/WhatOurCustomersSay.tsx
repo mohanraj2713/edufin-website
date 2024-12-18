@@ -200,13 +200,13 @@ const WhatOurCustomersSay = () => {
               <div
                 className={`${WhatOurCustomersSayStyles["carousel-wrapper"]}`}
               >
-                <Carousel
+                {/* <Carousel
                   slides={slides}
                   goToSlide={carouselState.goToSlide}
                   offsetRadius={carouselState.offsetRadius}
                   showNavigation={carouselState.showNavigation}
                   animationConfig={carouselState.config}
-                />
+                /> */}
               </div>
             </div>
           </div>
