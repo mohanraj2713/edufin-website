@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
-import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap CSS
 import LayoutWithoutSSR from "@/without-ssr/layout";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const Roboto = localFont({
+  src: "../../public/assets/fonts/Roboto-Regular.ttf",
+  variable: "--font-roboto",
 });
 
 export const metadata: Metadata = {
@@ -25,9 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <LayoutWithoutSSR>{children}</LayoutWithoutSSR>
+    <html lang="en" className={Roboto.variable}>
+      <body>
+        <LayoutWithoutSSR>
+          <div>{children}</div>
+        </LayoutWithoutSSR>
       </body>
     </html>
   );
